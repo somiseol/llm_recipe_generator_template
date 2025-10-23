@@ -1,0 +1,22 @@
+
+{{!-- TODO create ingredient submit form --}}
+
+<script>
+
+    let ingredientForm = document.querySelector('#ingredient-form')
+    let ingredientSubmitButton = document.querySelector('#submit-button')
+
+    // Ensure button is enabled and says "Submit" when the page is loaded
+    window.addEventListener('pageshow', function() {
+    ingredientSubmitButton.disabled = false
+    ingredientSubmitButton.value = "Submit"
+    })
+
+    // Disable button and change button text to "Creating..." when the user 
+    // has entered valid data in the form and clicked the submit button 
+    ingredientForm.addEventListener('submit', function() {
+        ingredientSubmitButton.value = "Creating..."
+        ingredientSubmitButton.disabled = true
+    })
+    
+</script>
